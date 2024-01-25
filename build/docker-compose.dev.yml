@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  public:
+    build:
+      context: ..
+      dockerfile: public/Dockerfile
+    networks:
+      - kns-network
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../config.yml:/app/config.yml
+    command: [ "/app/main" ]
+    restart: on-failure
+
+networks:
+  kns-network:
+    external: true

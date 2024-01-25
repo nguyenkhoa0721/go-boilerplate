@@ -1,0 +1,22 @@
+app:
+  Address: "0.0.0.0:3000"
+  AppBaseUrl: ""
+  Cors: ""
+  authSecret: ""
+
+postgres:
+  driver: "postgres"
+  host: "localhost"
+  port: 5432
+  username: "user"
+  password: "secret"
+  database: "db"
+
+redis:
+  host: ""
+  port: "6379"
+  password: "secret"
+
+uuid:
+  TotalReplicateNodes: 4
+  ShardingId: 1
