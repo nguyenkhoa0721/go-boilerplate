@@ -1,12 +1,10 @@
-package infra
-
-import "go-boilerplate/pkg/database/postgres"
+package postgres
 
 type BaseSqlRepo struct {
-	sql *postgres.Sql
+	sql *Sql
 }
 
-func NewBaseSqlRepo(sql *postgres.Sql) *BaseSqlRepo {
+func NewBaseSqlRepo(sql *Sql) *BaseSqlRepo {
 	return &BaseSqlRepo{
 		sql: sql,
 	}

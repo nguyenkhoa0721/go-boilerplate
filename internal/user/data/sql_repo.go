@@ -2,15 +2,14 @@ package data
 
 import (
 	"go-boilerplate/pkg/database/postgres"
-	"go-boilerplate/pkg/infra"
 )
 
 type UserRepo struct {
-	*infra.BaseSqlRepo
+	*postgres.BaseSqlRepo
 }
 
 func NewUserRepo(sql *postgres.Sql) *UserRepo {
 	return &UserRepo{
-		BaseSqlRepo: infra.NewBaseSqlRepo(sql),
+		BaseSqlRepo: postgres.NewBaseSqlRepo(sql),
 	}
 }
