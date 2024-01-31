@@ -9,12 +9,12 @@ import (
 )
 
 type UserService struct {
-	common *infra.Infra
+	infra *infra.Infra
 }
 
-func NewUserService(common *infra.Infra) *UserService {
+func NewUserService(infra *infra.Infra) *UserService {
 	return &UserService{
-		common: common,
+		infra: infra,
 	}
 }
 
