@@ -3,14 +3,14 @@ services:
   public:
     build:
       context: ..
-      dockerfile: public/Dockerfile
+      dockerfile: public/Dockerfile.dev
     networks:
       - go-network
     ports:
       - "3000:3000"
     volumes:
-      - ../config.yml:/app/config.yml
-    command: [ "/app/main" ]
+      - ../:/usr/app
+    command: air
     restart: on-failure
 
 networks:

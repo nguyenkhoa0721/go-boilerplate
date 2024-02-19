@@ -1,0 +1,15 @@
+package data
+
+import (
+	"{{ .App }}/pkg/database/postgres"
+)
+
+type {{ .Service }}Repo struct {
+	*postgres.BaseSqlRepo
+}
+
+func New{{ .Service }}Repo(sql *postgres.Sql) *{{ .Service }}Repo {
+	return &{{ .Service }}Repo{
+		BaseSqlRepo: postgres.NewBaseSqlRepo(sql),
+	}
+}

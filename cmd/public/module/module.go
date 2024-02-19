@@ -2,8 +2,6 @@ package module
 
 import (
 	"go-boilerplate/config"
-	"go-boilerplate/internal/auth"
-	"go-boilerplate/internal/user"
 	"go-boilerplate/pkg/database/postgres"
 	"go-boilerplate/pkg/database/redis"
 	"go-boilerplate/pkg/infra"
@@ -12,15 +10,17 @@ import (
 	"go.uber.org/fx"
 )
 
-func Module() fx.Option {
-	return fx.Module("fxmodule",
+func FeatureModule() fx.Option {
+	return fx.Module("feature_module")
+}
+
+func PkgModule() fx.Option {
+	return fx.Module("pkg_module",
 		config.Module(),
 		server.Module(),
 		postgres.Module(),
 		redis.Module(),
 		uuid.Module(),
 		infra.Module(),
-		user.Module(),
-		auth.Module(),
 	)
 }
