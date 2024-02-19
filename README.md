@@ -16,28 +16,7 @@
 6. `/pkg`
 7. `/script` Scripts for migration, seeding,...
 
-## Other
-
-1. Migration SQL script
-
-   `YYYYMMDDHHMMSS_name.up.sql` For migrate up
-
-   `YYYYMMDDHHMMSS_name.down.sql` For migrate down
-
-2. pkg/uuid
-    * UUID format
-        * Len: 20 numeric digit \~ 64 bit
-        * 41 bit for timestamp
-        * 6 bit for sharding id
-        * 6 bit for type
-        * 11 bit for counter
-    * Load capacity: 2048 per nano second \~ 2M per second
-
-
-## Setup Development Environment
-
-```bash
-cp example.config.yml config.yml
-go mod tidy
-go run cmd/public/main.go
+## Generator
+```
+go run ./cmd/cli/main.go
 ```
