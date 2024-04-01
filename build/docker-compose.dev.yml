@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: ./build/public/Dockerfile
+    networks:
+      - fortius-network
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../config.yml:/app/config.yml
+    command: [ "/app/main" ]
+    restart: on-failure
+
+networks:
+  fortius-network:
+    external: true

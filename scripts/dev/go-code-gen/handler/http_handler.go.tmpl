@@ -1,0 +1,16 @@
+package public
+
+import (
+	"github.com/gofiber/fiber/v2"
+	"go.uber.org/fx"
+)
+
+type {{ .Service }}PublicHandler struct {
+	fx.In
+
+	Route       fiber.Router `name:"FILL HERE"`
+}
+
+func RegisterHandler(h {{ .Service }}PublicHandler) {
+	route := h.Route.Group("/{{ .LowerService }}")
+}

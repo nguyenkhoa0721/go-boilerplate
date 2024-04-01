@@ -1,0 +1,44 @@
+app:
+  Address:
+  AppBaseUrl:
+  Cors:
+  authSecret:
+
+database:
+  driver:
+  host:
+  port:
+  username:
+  password:
+  database:
+
+redis:
+  host:
+  port:
+  password:
+
+uuid:
+  shardingId:
+  totalReplicateNodes:
+
+email:
+  key:
+  fromName:
+  fromEmail:
+  templatePath:
+
+
+socialAuth:
+  googleProvider:
+    clientID:
+    clientSecret:
+    scopes:
+    userInfoUrl:
+
+  telegramProvider:
+    token:
+
+otel:
+  collectorUrl:
+  insecure:
+  serviceName:

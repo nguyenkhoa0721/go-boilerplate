@@ -1,0 +1,15 @@
+package domain
+
+import (
+	"{{ .App }}/pkg/infra"
+)
+
+type {{ .Service }}Service struct {
+	infra *infra.Infra
+}
+
+func New{{ .Service }}Service(infra *infra.Infra) *{{ .Service }}Service {
+	return &{{ .Service }}Service{
+		infra: infra,
+	}
+}
