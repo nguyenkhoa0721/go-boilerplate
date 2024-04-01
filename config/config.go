@@ -14,10 +14,8 @@ type Config struct {
 	Redis         Redis
 	Uuid          Uuid
 	Otel          Otel
-	Vault         VaultConfig
 	CoinMarketCap CoinMarketCap
 	Indexer       Indexer
-	Sms           Sms
 }
 
 func LoadConfig() (*Config, error) {
